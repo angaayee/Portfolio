@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Raleway:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:#f8f9fa;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+nav{
+    background: #03045e;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+}
+.headers {
+    display: flex;
+}
+.headers p{
+    margin-left: 30px;
+    padding: 3px;
+}
+.headers p:hover{
+    background-color: aliceblue;
+    color: #03045e;
+    border-radius: 3px;
+}
+.container{
+    display: flex;
+    top: 65px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #f8f9fa;
+    width: 100%;
+    height: 800px;
+    background: linear-gradient(to right, rgba(12, 1, 1, 0.7) 0 100%), url("../images/1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+@keyframes slide {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+.container .role, .h1{
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-name: slide;
+    padding: 8px;
+}
+.container .h1{
+    border: 2px solid aliceblue;
+    text-align: center;
+    width: 280px;
+}
+a:visited{
+    color: #f8f9fa;
+    text-decoration: none;
+}
+a:hover{
+    color: #03045e;
+    text-decoration: none;
+}
+a{
+    color: #f8f9fa;
+    text-decoration: none;
+}
+.loading img{
+    width: 5%;
+    position: absolute;
+    top: 50%;
+    display: block;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-duration: 1s;
+    animation-iteration-count: 1000;
+    animation-name: load;
+}
+@keyframes load {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+#about{
+    background-color: #3a0ca3;
+    color: #f8f9fa;
+    padding: 10px;
+}
+.skill, .skill-header{
+    border: 2px solid #f8f9fa;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    color: #03045e;
+    border-radius: 2px;
+    line-height: 2rem;
+}
+.skill{
+    font-size: 17px;
+    font-weight: lighter;
+    background-color: transparent;
+    border: none;
+    color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.skills {
+    line-height: 1.5rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.skill-container:first-child{
+    background-color: #f72585;
+}
+.skill-container:nth-child(2){
+    background-color: #7209b7;
+}
+.skill-container:nth-child(3){
+    background-color: #3a0ca3;
+}
+.skill-container:last-child{
+    background-color: #4361ee;
+}
+.skill-container{
+    flex: 0 0 23%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 3px;
+    transition: transform 0.5s;
+}
+.skill-header{
+    text-align: center;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    padding: 0px;
+    border-radius: 5px;
+}
+.skills div:hover{
+    transform: scale(1.1);
+}
+
+.skills div:hover{
+    background-color: #03045e;
+}
+#contact{
+    background-color: #ffd6ff;
+    color: #03045e;
+    padding: 10px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.social{
+    list-style: none;
+    display: flex;
+    padding: 10px;
+    font-size: 20px;
+}
+.social li i{
+    margin-left: 20px;
+    color: #03045e;
+}
+.social li i:hover{
+    color: #f8f9fa;
+    font-size: 30px;
+}
+ #projects-main{
+    background-color: #c8b6ff;
+}
+#projects-main h1{
+    color: #f8f9fa;
+    padding: 10px;
+}
+.each-projects{
+display: flex;
+justify-content: space-around;
+align-items: center;
+flex-wrap: wrap;
+}
+.projects{
+    margin: 10px;
+    background-color: #5e548e;
+    color: #f8f9fa;
+    border-radius: 3px;
+}
+.projects img{
+    margin: 5px;
+    opacity: 0.5;
+}
+.projects img:hover{
+    opacity: 1;
+}
+h2{
+    text-align: center;
+    padding: 10px;
+    height: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.projects p{
+    text-align: center;
+}
+.projects .project-link{
+    background-color: #be95c4;
+    min-height:30px;
+    padding: 5px;
+}
+.projects .project-desc{
+    height: 20px;
+    min-height:50px;
+} 
+.explorer{
+    display: none;
+ }
+ .material-symbols-outlined{
+    display: none !important;
+ }
+ .contents{
+    display: block;
+ }
+@media screen and (max-width: 1200px) {
+    
+    .projects img{
+        width: 200px;
+        height: 200px;
+    }
+    h2{
+        padding: 10px;
+        font-size: 20px;
+    }
+    .skill-container{
+        flex: 0 0 40%;
+    }
+    .each-projects{
+        justify-content: space-around;
+    }
+    .projects{
+        flex-basis: 40%;
+    }
+    .projects img{
+        width: 97%;
+    }
+   
+}
+@media screen and (max-width: 700px) {
+body{
+    font-size: 15px;
+}
+.projects img{
+    height: 150px;
+}
+nav{
+    font-size: 14px;
+}
+.headers p{
+    font-size: 13px;
+}
+.container h1{
+    font-size: 15px;
+}
+.role{
+    font-size: 13px;
+}
+
+}
+@media screen and (max-width: 460px) {
+    .projects img{
+        height: 150px;
+        width: 97%;
+    }
+    
+    .container h1{
+        font-size: 12px;
+    }
+    .role{
+        font-size: 10px;
+    }
+    .skill-container{
+        flex: 0 0 100%;
+    }
+    .container .h1{
+        width: 150px;
+    }
+    .container{
+        height: 300px;
+    }
+    .projects{
+        flex-basis: 80%;
+    }
+    .each-projects{
+        justify-content: center;
+    }
+    .material-symbols-outlined{
+        font-size: 8px !important;
+    }
+    .material-symbols-outlined{
+        display: block !important;
+        font-size: 10px !important;
+     }
+     .contents{
+        display: none;
+     }
+     nav{
+        font-size: 12px;
+     }
+     .skill{
+        font-size: 10px;
+     }
+    }
